@@ -33,9 +33,8 @@ rules = rules.sort_values(['confidence', 'lift'], ascending=[False, False])
 
 # Create a Streamlit app
 def main():
-    st.title("Association Rules Analysis")
-    st.subheader("Top Association Rules for {}".format(country))
-    
+    st.title("Top Association Rules for {}".format(country))
+  
     # Display the products to promote
     st.subheader("Products to Promote")
     promote_products = rules[rules['antecedents'].apply(lambda x: len(x) == 1)]
