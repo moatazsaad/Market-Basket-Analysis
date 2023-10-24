@@ -1,0 +1,4 @@
+mlxtend==0.22.0
+openpyxl==3.0.10
+pandas==1.5.2
+streamlit==1.22.0
