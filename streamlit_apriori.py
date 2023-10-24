@@ -7,7 +7,9 @@ import openpyxl
 df = pd.read_excel('Online Retail.xlsx')
 df['Description'] = df['Description'].str.strip()
 
-country = st.selectbox("Select a country", df['Country'].unique())
+countries = df['Country'].unique()
+countries = countries[countries != 'United Kingdom']
+country = st.selectbox("Select a country", countries)
 
 # Transaction for the selected country
 Basket_Country = (df[df['Country'] == country]
